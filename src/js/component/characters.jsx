@@ -12,7 +12,7 @@ export const Characters = props => {
 		<CharacterCard
 			key={index}
 			img={store.imgStarWarsCharacters[index]}
-			racterName={starWarsCharacterDescription.name}
+			characterName={starWarsCharacterDescription.name}
 			characterHeight={starWarsCharacterDescription.height}
 			characterHairColor={starWarsCharacterDescription.hair_color}
 			characterSkinColor={starWarsCharacterDescription.skin_color}

@@ -1,5 +1,6 @@
 import React from "react";
 import PropsTypes from "prop-types";
+import { Link, useParams } from "react-router-dom";
 
 export const CharacterCard = props => {
 	return (
@@ -15,7 +16,18 @@ export const CharacterCard = props => {
 				</ul>
 			</div>
 			<div className="card-body">
-				<link href="#" className="btn btn-primary" />
+				<Link to="/character">
+					<span className="btn btn-primary btn-lg" href="#" role="button">
+						Click to more info!
+					</span>
+				</Link>
+
+				<Link
+					to={{
+						pathname: "/character",
+						data: props.characterName // your data array of objects
+					}}
+				/>
 				<link href="#" className="btn btn-primary" />
 			</div>
 		</div>
