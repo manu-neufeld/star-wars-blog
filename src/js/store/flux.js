@@ -1,42 +1,37 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			demo: [
-				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
-				},
-				{
-					title: "SECOND",
-					background: "white",
-					initial: "white"
-				}
-			]
+			starWarsCharactersDescription: []
 		},
 		actions: {
-			// Use getActions to call a function within a fuction
-			exampleFunction: () => {
-				getActions().changeColor(0, "green");
+			getStarWarsPeople: () => {
+				fetch("https://swapi.dev/api/people/")
+					.then(response => {
+						return response.json();
+					})
+					.then(jsonApiResponse => {
+						console.log("JSON Response: ", jsonApiResponse.results);
+						setStore({ starWarsCharactersDescription: jsonApiResponse.results });
+						console.log("characterDescriptions: ", getStore().starWarsCharactersDescription);
+					})
+					.catch(error => {
+						console.error("Error", error);
+					});
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-			},
-			changeColor: (index, color) => {
-				//get the store
-				const store = getStore();
 
-				//we have to loop the entire demo array to look for the respective index
-				//and change its color
-				const demo = store.demo.map((elm, i) => {
-					if (i === index) elm.background = color;
-					return elm;
+			setPerson: person => {
+				let formatedCharacters = [];
+				person.map((character, index) => {
+					formatedCharacters.push({
+						name: character.name,
+						height: character.height,
+						hair_color: character.hair_color,
+						skin_color: character.skin_color,
+						eye_color: character.eye_color,
+						birth_year: character.birth_year
+					});
 				});
-
-				//reset the global store
-				setStore({ demo: demo });
+				setStore({ person: formatedCharacters });
 			}
 		}
 	};
