@@ -4,7 +4,7 @@ import PropsTypes from "prop-types";
 export const CharacterCard = props => {
 	return (
 		<div className="card">
-			<img src="#" className="card-img-top" alt="#" />
+			<img src={props.img} className="card-img-top" alt="#" />
 			<div className="card-body">
 				<h5 className="card-title">Name: {props.characterName}</h5>
 				<ul className="list-group list-group-flush">
@@ -27,6 +27,6 @@ CharacterCard.propTypes = {
 	characterHeight: PropsTypes.string,
 	characterHairColor: PropsTypes.string,
 	characterSkinColor: PropsTypes.string,
-	characterEyeColor: PropsTypes.string,
-	characterBirthYear: PropsTypes.string
+	characterBirthYear: PropsTypes.string,
+	img: PropsTypes.string
 };

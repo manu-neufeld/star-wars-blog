@@ -6,11 +6,13 @@ export const Characters = props => {
 	const { store, actions } = useContext(Context);
 
 	console.log("info de flux: ", store.starWarsCharactersDescription);
+	console.log("img importadas: ", store.imgStarWarsCharacters);
 
 	const cards = store.starWarsCharactersDescription.map((starWarsCharacterDescription, index) => (
 		<CharacterCard
 			key={index}
-			characterName={starWarsCharacterDescription.name}
+			img={store.imgStarWarsCharacters[index]}
+			racterName={starWarsCharacterDescription.name}
 			characterHeight={starWarsCharacterDescription.height}
 			characterHairColor={starWarsCharacterDescription.hair_color}
 			characterSkinColor={starWarsCharacterDescription.skin_color}
