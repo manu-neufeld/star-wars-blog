@@ -22,12 +22,12 @@ export const CharacterCard = props => {
 					</span>
 				</Link>
 
-				<Link
+				{/* <Link
 					to={{
 						pathname: "/character",
 						data: props.characterName // your data array of objects
 					}}
-				/>
+				/> */}
 				<link href="#" className="btn btn-primary" />
 			</div>
 		</div>

@@ -4,12 +4,12 @@ import luke from "../../img/luke.jpg";
 import PropsTypes from "prop-types";
 
 export const CharacterPersonalDescription = props => {
-	const { location } = this.props;
+	// const { location } = this.props;
 	return (
 		<div className="card">
 			<img src={luke} alt="..." />
 			<div className="card-body">
-				<h5 className="card-title">{data}</h5>
+				<h5 className="card-title">Luke Skywalker</h5>
 				<p className="card-text">
 					Luke Skywalker, a Force-sensitive human male, was a legendary Jedi Master who fought in the Galactic
 					Civil War during the reign of the Galactic Empire. Along with his companions, Princess Leia Organa
