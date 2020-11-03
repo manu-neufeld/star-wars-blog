@@ -5,10 +5,7 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
 	const { store, actions } = useContext(Context);
-	// let deleteTask = indexItem => {
-	// 	task.splice(indexItem, 1);
-	// };
-
+	const [listElement, setListElement] = useState(null);
 	const list = store.favorites.map((item, index) => {
 		return (
 			<li className="dropdown-item" key={index}>
@@ -16,7 +13,25 @@ export const Navbar = () => {
 			</li>
 		);
 	});
+	let deleteFav = indexItem => {
+		console.log(store.favorites);
+		store.favorites.splice(indexItem, 1);
+	};
 
+	useEffect(() => {
+		setListElement(
+			store.favorites.map((eachFavorite, index) => {
+				return (
+					<li key={index} className="dropdown-item">
+						{eachFavorite}
+						<button className="button" onClick={() => deleteFav(index)}>
+							Del
+						</button>
+					</li>
+				);
+			})
+		);
+	});
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
@@ -35,17 +50,9 @@ export const Navbar = () => {
 					aria-expanded="false">
 					Show favorites
 				</button>
-				<div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-					<a className="dropdown-item">Hello</a>
-					{store.favorites.map((eachFavorite, index) => {
-						return (
-							<a key={index} className="dropdown-item">
-								{eachFavorite}
-								<button>Del</button>
-							</a>
-						);
-					})}
-				</div>
+				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+					{listElement}
+				</ul>
 			</div>
 		</nav>
 	);

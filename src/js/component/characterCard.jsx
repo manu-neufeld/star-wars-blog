@@ -39,8 +39,9 @@ export const CharacterCard = props => {
 						console.log("añadiendo: ", store.favorites);
 						actions.setFavorites(name);
 						console.log("store: ", store.favorites);
-					}}
-				/>
+					}}>
+					Fav
+				</button>
 			</div>
 		</div>
 	);

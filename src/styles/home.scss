@@ -1,0 +1,10 @@
+.card {
+    width: 18rem;
+    min-width: 18rem;
+}
+
+.people-row{
+    display: flex;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}

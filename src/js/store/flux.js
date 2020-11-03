@@ -44,9 +44,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 						return response.json();
 					})
 					.then(jsonApiResponse => {
-						console.log("JSON Response: ", jsonApiResponse.results);
 						setStore({ starWarsCharactersDescription: jsonApiResponse.results });
-						console.log("characterDescriptions: ", getStore().starWarsCharactersDescription);
 					})
 					.catch(error => {
 						console.error("Error", error);

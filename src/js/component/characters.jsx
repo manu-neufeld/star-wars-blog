@@ -5,9 +5,6 @@ import { Context } from "../store/appContext";
 export const Characters = props => {
 	const { store, actions } = useContext(Context);
 
-	console.log("info de flux: ", store.starWarsCharactersDescription);
-	console.log("img importadas: ", store.imgStarWarsCharacters);
-
 	const cards = store.starWarsCharactersDescription.map((starWarsCharacterDescription, index) => (
 		<CharacterCard
 			key={index}
@@ -20,8 +17,5 @@ export const Characters = props => {
 			characterBirthYear={starWarsCharacterDescription.birth_year}
 		/>
 	));
-
-	console.log("Cards: ", cards);
-
 	return cards;
 };
