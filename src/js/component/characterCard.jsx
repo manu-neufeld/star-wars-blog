@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useState, useContext, setStore } from "react";
 import PropsTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
+import { Context } from "../store/appContext";
 
 export const CharacterCard = props => {
+	const { store, actions } = useContext(Context);
+
+	let name = props.characterName;
+
 	return (
 		<div className="card">
 			<img src={props.img} className="card-img-top" alt="#" />
 			<div className="card-body">
-				<h5 className="card-title">Name: {props.characterName}</h5>
+				<h5 className="card-title">Name: {name}</h5>
 				<ul className="list-group list-group-flush">
 					<li className="list-group-item">Height: {props.characterHeight}</li>
 					<li className="list-group-item">Hair color: {props.characterHairColor}</li>
@@ -28,7 +33,14 @@ export const CharacterCard = props => {
 						data: props.characterName // your data array of objects
 					}}
 				/> */}
-				<link href="#" className="btn btn-primary" />
+				<button
+					type="button"
+					onClick={() => {
+						console.log("añadiendo: ", store.favorites);
+						actions.setFavorites(name);
+						console.log("store: ", store.favorites);
+					}}
+				/>
 			</div>
 		</div>
 	);

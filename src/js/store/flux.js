@@ -34,7 +34,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 				"Biggs Darklighter was a human male ace pilot who fought for the Alliance to Restore the Republic during the early days of the Galactic Civil War. He grew up on the desert world of Tatooine, where he became a close boyhood friend of Luke Skywalker. The two became pilots and dreamed of leaving Tatooine. Darklighter left his homeworld for the Imperial Academy, but defected from the Galactic Empire after graduation in order to join the Rebel Alliance. He returned to Tatooine one final time to tell Skywalker of his plans.",
 
 				"Obi-Wan Kenobi was a legendary human male Jedi Master who served on the Jedi High Council during the last years of the Republic Era. During the Imperial Era, he adopted the alias Ben Kenobi in order to hide from the regime that drove the Jedi to near extinction. A noble man known for his skills with the Force, Kenobi trained Anakin Skywalker, served as a Jedi General in the Grand Army of the Republic, and became a mentor to Luke Skywalker prior to his death in 0 BBY."
-			]
+			],
+			favorites: []
 		},
 		actions: {
 			getStarWarsPeople: () => {
@@ -50,6 +51,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(error => {
 						console.error("Error", error);
 					});
+			},
+			setFavorites: eachFavorite => {
+				setStore({ favorites: [...getStore().favorites, eachFavorite] });
 			}
 		}
 	};
