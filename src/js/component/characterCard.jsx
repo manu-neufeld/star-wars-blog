@@ -26,15 +26,8 @@ export const CharacterCard = props => {
 						Click to more info!
 					</span>
 				</Link>
-
-				{/* <Link
-					to={{
-						pathname: "/character",
-						data: props.characterName // your data array of objects
-					}}
-				/> */}
 				<button
-					type="button"
+					className="btn btn-outline-danger"
 					onClick={() => {
 						console.log("añadiendo: ", store.favorites);
 						actions.setFavorites(name);

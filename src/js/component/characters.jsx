@@ -1,6 +1,7 @@
 import React, { useEffect, getStore, useContext } from "react";
 import { CharacterCard } from "./characterCard.jsx";
 import { Context } from "../store/appContext";
+import { Link, useParams } from "react-router-dom";
 
 export const Characters = props => {
 	const { store, actions } = useContext(Context);
