@@ -1,5 +1,5 @@
 import React, { useState, useContext, setStore } from "react";
-import PropsTypes from "prop-types";
+import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
@@ -21,7 +21,7 @@ export const CharacterCard = props => {
 				</ul>
 			</div>
 			<div className="card-body">
-				<Link to="/character">
+				<Link to={"/character/" + name}>
 					<span className="btn btn-primary btn-lg" href="#" role="button">
 						Click to more info!
 					</span>
@@ -41,10 +41,10 @@ export const CharacterCard = props => {
 };
 
 CharacterCard.propTypes = {
-	characterName: PropsTypes.string,
-	characterHeight: PropsTypes.string,
-	characterHairColor: PropsTypes.string,
-	characterSkinColor: PropsTypes.string,
-	characterBirthYear: PropsTypes.string,
-	img: PropsTypes.string
+	characterName: PropTypes.string,
+	characterHeight: PropTypes.string,
+	characterHairColor: PropTypes.string,
+	characterSkinColor: PropTypes.string,
+	characterBirthYear: PropTypes.string,
+	img: PropTypes.string
 };
