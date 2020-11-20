@@ -8,6 +8,7 @@ export const Characters = props => {
 	const cards = store.starWarsCharactersDescription.map((starWarsCharacterDescription, index) => (
 		<CharacterCard
 			key={index}
+			img={store.imgStarWarsCharacters[index].img}
 			characterName={starWarsCharacterDescription.name}
 			characterHeight={starWarsCharacterDescription.height}
 			characterHairColor={starWarsCharacterDescription.hair_color}

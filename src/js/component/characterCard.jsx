@@ -1,13 +1,14 @@
-import React, { useState, useContext, setStore, Fragment } from "react";
+import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const CharacterCard = props => {
-    const { store, actions } = useContext(Context);
-    
-    let name = props.characterName;
-    
+	const { store, actions } = useContext(Context);
+
+	let name = props.characterName;
+
+	return (
 		<div className="card">
 			<img src={props.img} className="card-img-top" alt="#" />
 			<div className="card-body">
@@ -36,6 +37,7 @@ export const CharacterCard = props => {
 				</button>
 			</div>
 		</div>
+	);
 };
 
 CharacterCard.propTypes = {
