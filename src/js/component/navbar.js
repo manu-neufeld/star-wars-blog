@@ -32,7 +32,7 @@ export const Navbar = () => {
 		);
 	});
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav className="navbar">
 			<Link to="/">
 				<img
 					src="https://tendencybook.com/wp-content/uploads/2019/08/star-wars-.png"

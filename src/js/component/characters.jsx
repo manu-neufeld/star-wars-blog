@@ -1,6 +1,7 @@
 import React, { useContext, Fragment } from "react";
 import { CharacterCard } from "./characterCard.jsx";
 import { Context } from "../store/appContext";
+// import "../../styles/home.scss";
 
 export const Characters = () => {
 	const { store } = useContext(Context);
@@ -17,10 +18,5 @@ export const Characters = () => {
 			characterBirthYear={starWarsCharacterDescription.birth_year}
 		/>
 	));
-	return (
-		<div className="all-characters-view">
-			<h1>Personajes</h1>
-			<div className="row">{cards}</div>
-		</div>
-	);
+	return cards;
 };

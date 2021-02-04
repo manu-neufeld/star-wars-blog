@@ -2,9 +2,10 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.scss";
 import { Link, useParams } from "react-router-dom";
+import "../../styles/characterView.scss";
 
 export const CharacterPersonalDescription = () => {
-	const { store } = useContext(Context);
+	const { store, actions } = useContext(Context);
 	let theid = useParams();
 	let SWIndex = -1;
 	for (let index = 0; index < store.starWarsCharactersDescription.length; index++) {
@@ -23,7 +24,7 @@ export const CharacterPersonalDescription = () => {
 		}
 	}
 	let cardLuke = (
-		<div className="card more-info">
+		<div className="card-more-info">
 			<img src={store.imgStarWarsCharacters[SWIndex].img} alt="..." />
 			<div className="card-body more-info-body">
 				<p className="card-title more-info-name-character">
@@ -40,5 +41,5 @@ export const CharacterPersonalDescription = () => {
 			</div>
 		</div>
 	);
-	return cardLuke;
+	return <div className="conatiner">{cardLuke}</div>;
 };

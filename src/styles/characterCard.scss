@@ -1,6 +1,7 @@
 .each-character-card{
     padding: 1rem;
-    max-width: 12rem;
+    min-width: 19rem;
+    max-width: 19rem;
     display: flex;
     flex-wrap: wrap;
     float: left;
@@ -168,6 +169,4 @@ button {
     justify-self: center;
   }
 }
-
-//AÑADIR FAVORITOS
 

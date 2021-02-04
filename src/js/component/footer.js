@@ -5,7 +5,7 @@ import hanIcon from "../../img/SWIcons/han-solo.jpg";
 import lukeIcon from "../../img/SWIcons/luke-skywalker.jpg";
 import leiaIcon from "../../img/SWIcons/princess-leia.jpg";
 import r2d2Icon from "../../img/SWIcons/r2d2Icon.jpg";
-import "../../styles/footer.scss";
+import "../../styles/index.scss";
 
 export const Footer = () => (
 	<footer className="footer mt-auto py-3 text-center">

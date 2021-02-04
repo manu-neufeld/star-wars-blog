@@ -1,9 +1,62 @@
 /* 
     General Styles
 */
+body{
+    background-image: url("https://us.123rf.com/450wm/jaysi/jaysi1512/jaysi151200033/50743331-estrellas-y-cielo-espacio-galaxia-noche-estrellada-de-fondo.jpg?ver=6");
+}
+.navbar{
+    
+    position:fixed;
+    width:100%;
+    height:5rem;
+     
+}
 .navbar-brand{
     width: 70px;
     height: 45px;
 }
 
+.footer{
+    width:100%;
+}
 
+ .icon{
+        min-width: 2rem;
+        max-width: 2rem;
+        margin: 1rem;
+}
+
+
+.characters-div {
+    width: 1349px;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    margin-top: 2rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+}
+ .character-view-title{
+        font-family: 'Yusei Magic', sans-serif;
+        color: blanchedalmond;
+        margin-top: 5rem;
+        font-size: 2.8rem;
+        text-align: center;
+    }
+
+.each-character-name{
+    margin-top: 0.5rem;
+    font-family: 'Dancing Script', cursive;
+    color: #781f19;
+    font-weight: bold;
+}
+
+.list-group-flush{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    opacity: 0.3;
+    font-family: 'Dancing Script', cursive;
+    color: #0a0a0a;
+    font-weight: bold;
+}
