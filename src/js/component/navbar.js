@@ -40,7 +40,24 @@ export const Navbar = () => {
 				/>
 			</Link>
 			<div className="dropdown">
-				<button
+				<button className="learn-more">
+					<span className="circle" aria-hidden="true">
+						<span className="icon arrow" />
+					</span>
+					<span
+						className="button-text"
+						type="button"
+						id="dropdownMenuButton"
+						data-toggle="dropdown"
+						aria-haspopup="true"
+						aria-expanded="false">
+						Favorites
+					</span>
+					<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+						{listElement}
+					</ul>
+				</button>
+				{/* <button
 					className="btn btn-primary dropdown-toggle"
 					type="button"
 					id="dropdownMenuButton"
@@ -51,7 +68,7 @@ export const Navbar = () => {
 				</button>
 				<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton">
 					{listElement}
-				</ul>
+				</ul> */}
 			</div>
 		</nav>
 	);

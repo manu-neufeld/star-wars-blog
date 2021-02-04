@@ -7,7 +7,9 @@ export const Home = () => {
 	return (
 		<div className="characters-div">
 			<h1 className="character-view-title">Personajes</h1>
-			<Characters />
+			<div className="row">
+				<Characters />
+			</div>
 		</div>
 	);
 };

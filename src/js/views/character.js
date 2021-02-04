@@ -34,9 +34,12 @@ export const CharacterPersonalDescription = () => {
 					{store.descriptionsStarWarsCharacters[SWIndex].description}
 				</p>
 				<Link to="/">
-					<span className="btn btn-primary btn-lg" href="#" role="button">
-						Back home!
-					</span>
+					<button className="learn-more">
+						<span className="circle" aria-hidden="true">
+							<span className="icon arrow" />
+						</span>
+						<span className="button-text">Back home</span>
+					</button>
 				</Link>
 			</div>
 		</div>

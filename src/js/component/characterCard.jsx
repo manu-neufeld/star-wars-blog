@@ -10,7 +10,7 @@ export const CharacterCard = props => {
 	let name = props.characterName;
 
 	return (
-		<div className="card each-character-card">
+		<div className="card each-character-card col-5">
 			<div className="img-fav-div">
 				<img src={props.img} className="card-img-top each-character-image" alt="#" />
 				<button
