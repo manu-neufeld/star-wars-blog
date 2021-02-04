@@ -23,11 +23,15 @@ export const CharacterPersonalDescription = () => {
 		}
 	}
 	let cardLuke = (
-		<div className="card">
+		<div className="card more-info">
 			<img src={store.imgStarWarsCharacters[SWIndex].img} alt="..." />
-			<div className="card-body">
-				<h5 className="card-title">{store.starWarsCharactersDescription[SWIndex].name}</h5>
-				<p className="card-text">{store.descriptionsStarWarsCharacters[SWIndex].description}</p>
+			<div className="card-body more-info-body">
+				<p className="card-title more-info-name-character">
+					{store.starWarsCharactersDescription[SWIndex].name}
+				</p>
+				<p className="card-text more-info-description">
+					{store.descriptionsStarWarsCharacters[SWIndex].description}
+				</p>
 				<Link to="/">
 					<span className="btn btn-primary btn-lg" href="#" role="button">
 						Back home!

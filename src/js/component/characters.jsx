@@ -1,7 +1,6 @@
 import React, { useContext, Fragment } from "react";
 import { CharacterCard } from "./characterCard.jsx";
 import { Context } from "../store/appContext";
-import "../../styles/characterCard.scss";
 
 export const Characters = () => {
 	const { store } = useContext(Context);
