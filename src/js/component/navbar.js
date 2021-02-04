@@ -1,10 +1,10 @@
-import React, { useState, useContext, setStore, useEffect } from "react";
-import PropsTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
+import React, { useState, useContext, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import "../../styles/index.scss";
 
 export const Navbar = () => {
-	const { store, actions } = useContext(Context);
+	const { store } = useContext(Context);
 	const [listElement, setListElement] = useState(null);
 	const list = store.favorites.map((item, index) => {
 		return (
@@ -14,7 +14,6 @@ export const Navbar = () => {
 		);
 	});
 	let deleteFav = indexItem => {
-		console.log(store.favorites);
 		store.favorites.splice(indexItem, 1);
 	};
 
@@ -25,7 +24,7 @@ export const Navbar = () => {
 					<li key={index} className="dropdown-item">
 						{eachFavorite}
 						<button className="button" onClick={() => deleteFav(index)}>
-							Del
+							<i className="fas fa-trash-alt" />
 						</button>
 					</li>
 				);

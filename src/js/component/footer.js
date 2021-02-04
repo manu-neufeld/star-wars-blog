@@ -1,10 +1,21 @@
-import React, { Component } from "react";
+import React from "react";
+import c3poIcon from "../../img/SWIcons/C3P0.jpg";
+import chewbeIcon from "../../img/SWIcons/chewbaca.jpg";
+import hanIcon from "../../img/SWIcons/han-solo.jpg";
+import lukeIcon from "../../img/SWIcons/luke-skywalker.jpg";
+import leiaIcon from "../../img/SWIcons/princess-leia.jpg";
+import r2d2Icon from "../../img/SWIcons/r2d2Icon.jpg";
+import "../../styles/footer.scss";
 
 export const Footer = () => (
 	<footer className="footer mt-auto py-3 text-center">
 		<p>
-			Made with <i className="fa fa-heart text-danger" /> by{" "}
-			<a href="http://www.4geeksacademy.com">4Geeks Academy</a>
+			<img src={c3poIcon} className="icon" />
+			<img src={chewbeIcon} className="icon" />
+			<img src={hanIcon} className="icon" />
+			<img src={lukeIcon} className="icon" />
+			<img src={leiaIcon} className="icon" />
+			<img src={r2d2Icon} className="icon" />
 		</p>
 	</footer>
 );

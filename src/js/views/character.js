@@ -22,9 +22,6 @@ export const CharacterPersonalDescription = () => {
 			SWIndex = index;
 		}
 	}
-	console.log("theid :", theid);
-	console.log("index :", SWIndex);
-
 	let cardLuke = (
 		<div className="card">
 			<img src={store.imgStarWarsCharacters[SWIndex].img} alt="..." />

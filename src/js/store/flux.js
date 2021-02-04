@@ -1,13 +1,13 @@
-import luke from "../../img/luke.jpg";
-import c3po from "../../img/C-3PO.jpg";
-import r2d2 from "../../img/R2D2.jpg";
-import darthVader from "../../img/darth-vader.jpg";
-import leia from "../../img/leia.jpg";
-import owenLars from "../../img/owen-lars.jpg";
-import beru from "../../img/beru-whitesun.jpg";
-import r5d4 from "../../img/R5-D4.jpg";
-import biggs from "../../img/biggs.jpg";
-import obiWan from "../../img/obi-wan.jpg";
+import luke from "../../img/SWImage/luke.jpg";
+import c3po from "../../img/SWImage/C-3PO.jpg";
+import r2d2 from "../../img/SWImage/R2D2.jpg";
+import darthVader from "../../img/SWImage/darth-vader.jpg";
+import leia from "../../img/SWImage/leia.jpg";
+import owenLars from "../../img/SWImage/owen-lars.jpg";
+import beru from "../../img/SWImage/beru-whitesun.jpg";
+import r5d4 from "../../img/SWImage/R5-D4.jpg";
+import biggs from "../../img/SWImage/biggs.jpg";
+import obiWan from "../../img/SWImage/obi-wan.jpg";
 
 const getState = ({ getStore, getActions, setStore }) => {
 	return {

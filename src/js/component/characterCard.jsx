@@ -2,14 +2,15 @@ import React, { useState, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import "../../styles/characterCard.scss";
 
 export const CharacterCard = props => {
-	const { store, actions } = useContext(Context);
+	const { actions } = useContext(Context);
 
 	let name = props.characterName;
 
 	return (
-		<div className="card">
+		<div className="card each-caracter-card">
 			<img src={props.img} className="card-img-top" alt="#" />
 			<div className="card-body">
 				<h5 className="card-title">Name: {name}</h5>
@@ -29,11 +30,9 @@ export const CharacterCard = props => {
 				<button
 					className="btn btn-outline-danger"
 					onClick={() => {
-						console.log("añadiendo: ", store.favorites);
 						actions.setFavorites(name);
-						console.log("store: ", store.favorites);
 					}}>
-					Fav
+					<i className="fas fa-heart" />
 				</button>
 			</div>
 		</div>

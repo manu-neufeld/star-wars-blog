@@ -2,8 +2,8 @@ import React, { useContext } from "react";
 import { CharacterCard } from "./characterCard.jsx";
 import { Context } from "../store/appContext";
 
-export const Characters = props => {
-	const { store, actions } = useContext(Context);
+export const Characters = () => {
+	const { store } = useContext(Context);
 
 	const cards = store.starWarsCharactersDescription.map((starWarsCharacterDescription, index) => (
 		<CharacterCard
