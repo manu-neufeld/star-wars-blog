@@ -1,8 +1,7 @@
-import React, { useState, useContext } from "react";
+import React, { useContext } from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-import "../../styles/characterCard.scss";
 
 export const CharacterCard = props => {
 	const { actions } = useContext(Context);
